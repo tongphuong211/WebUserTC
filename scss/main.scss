@@ -1,0 +1,18 @@
+/* sass --watch input.scss output.cssmain.scss ../Senprint/css/style.css --style compressed --no-source-map */
+
+/*!
+ * Theme Name: WebUser - Tuần Châu
+ * Author: TongPhuong
+ * Version: 1.0
+ * Text Domain: zing
+ */
+
+@import "variable";
+@import "reset";
+@import "base";
+@import "bs";
+//
+@import "common";
+@import "index";
+@import "swiper";
+/* sass --watch main.scss ../WebUser/css/style.css --style compressed --no-source-map */
