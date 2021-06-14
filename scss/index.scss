@@ -191,8 +191,13 @@
     &__img{
         position: relative;
         img{
-            height: 360px;
+            height: 220px;
             border-radius: 10px;
+        }
+        &:hover{
+            img{
+                transform: scale(1.02);
+            }
         }
     }
 }
@@ -204,13 +209,14 @@
     transform: translateY(40%);
     background: none;
     width: 200px;
-    height: 40px;
+    height: 34px;
     @include center-item(flex, center, center);
     &:before{
         @include befo($dark-blue, 100%, 100%);
         clip-path: polygon(94% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
         top: 0;
         left: 0;
+        border-radius: 4px;
     }
     span{
         position: relative;
@@ -229,35 +235,23 @@
 
 .point-go-come{
     @include center-item(flex, space-around, center);
-
     img{
-        height: 30px;
+        height: 20px;
     }
 }
 
 .port{
     color: $dark-blue;
-    font-size: 1.1rem;
+    font-size: .875rem;
     font-weight: bold;
-    &:before{
-        @include befo(none, 0, 0);
-        top: 5px;
-        right: -0.7rem;
-        border: solid $blue;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-        @include trans(all .2s);
-    }
 }
 
 .double-arrow{
     position: relative;
     &:before{
         @include befo(none, 0, 0);
-        top: 13px;
-        left: -2.5rem;
+        top: 7px;
+        left: -1.5rem;
         border: solid $blue;
         border-width: 0 2px 2px 0;
         display: inline-block;
@@ -267,13 +261,23 @@
     }
     &:after{
         @include befo(none, 0, 0);
-        top: 13px;
-        right: -2.5rem;
+        top: 7px;
+        right: -1.5rem;
         border: solid $red;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
         transform: rotate(-45deg);
         @include trans(all .2s);
+    }
+}
+
+.time-ferry{
+    @include center-item(flex, space-around, center);
+    font-size: .75rem;
+    color: $dark;
+    .time-run{
+        position: relative;
+        left: -1rem;
     }
 }
