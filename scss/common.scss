@@ -16,9 +16,9 @@
     transition: $time;
 }
 
-$dark: #868ca7;
+$dark: #24262d;
 $black: #000000;
-$orange: #F7941E;
+$orange: #DE9E53;
 $red: #FF3100;
 $light-gray: #F4F5FB;
 $gray: #c2c5d4;
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .btn-style{
-    background: $blue;
+    background: $dark;
     padding: 1.2rem 3rem;
     text-decoration: none;
     transition: all .3s;
@@ -134,7 +134,7 @@ a:hover {
     font-size: .8rem;
     text-transform: uppercase;
     &:before{
-        @include befo($dark-blue, 100%, 100%);
+        @include befo($orange, 100%, 100%);
 
         top: 0;
         left: 0;

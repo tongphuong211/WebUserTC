@@ -27,7 +27,7 @@
             opacity: 0;
             @include trans(all 1s ease .6s);
             transform: translateX(-100px);
-            text-shadow: 1.5px 1.5px rgb(85, 85, 85);
+            text-shadow: 1.5px 1.5px rgb(17, 17, 17);
         }
     }
 
@@ -98,6 +98,40 @@
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: -0.5px;
+    position: relative;
+    z-index: 2;
+    span{
+        color: $orange;
+        font-size: .7rem;
+        display: block;
+        margin-bottom: .8rem;
+        font-weight: 600;
+    }
+    &--left{
+        font-size: 2.7rem;
+        color: $white;
+        letter-spacing: -0.8px;
+        line-height: 3.5rem;
+        text-shadow: rgb(18 18 18) 1px 1px;
+        span{
+            font-size: .8rem;
+            line-height: 1rem;
+        }
+    }
+    &.mt-at{
+        margin-top: 120px;
+    }
+    &--white{
+        font-size: 2.5rem;
+        span{
+            color: $white;
+        }
+        a{
+            font-weight: 600;
+            font-size: 2.3rem;
+            display: block;
+        }
+    }
 }
 
 .view-all{
@@ -178,13 +212,6 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 900;
-    span{
-        color: $orange;
-        font-size: .7rem;
-        display: block;
-        margin-bottom: .8rem;
-        font-weight: 600;
-    }
 }
 
 .box-ferry{
@@ -278,6 +305,95 @@
     color: $dark;
     .time-run{
         position: relative;
-        left: -1rem;
+        left: -0.8rem;
+    }
+}
+
+.why-choose-us{
+    background: $dark;
+    padding: 110px 0 100px;
+    position: relative;
+    &:before{
+        @include befo($blue, 70%, 100%);
+        background: url('../img/banner/sea-1.jpg') no-repeat;
+        top: 0;
+        left: 30%;
+        background-size: cover;
+    }
+    &:after{
+        @include befo(#24262d6c, 100%, 100%);
+        top: 0;
+        left: 0;
+    }
+}
+
+.box-choose{
+    background: $white;
+    padding: 4rem 5rem 5rem;
+    position: relative;
+    z-index: 2;
+    margin-right: 5rem;
+    &:before{
+        position: absolute;
+        left: 0;
+        right: 21px;
+        top: -18px;
+        height: 18px;
+        background-color: $white;
+        content: "";
+    }
+    &:after{
+        position: absolute;
+        right: 0;
+        top: -18px;
+        border-bottom: 18px solid $white;
+        border-right: 21px solid transparent;
+        content: "";
+    }
+}
+
+.feature-list{
+    position: relative;
+    counter-reset: count;
+    li{
+        position: relative;
+        display: block;
+        font-size: 1rem;
+        line-height: 2em;
+        color: $dark;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+        margin-bottom: 2rem;
+        padding-left: 3rem;
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+            line-height: 2em;
+            font-weight: 600;
+            counter-increment: count;
+            content: "0" counter(count);
+            color: $orange;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.section-contact{
+    padding: 100px 0;
+    background-color: #DE9E53;
+    background-color: rgb(3 95 137);
+
+    text-align: center;
+    position: relative;
+    &:before{
+        @include befo(none, 100%, 100%);
+        top: 0;
+        left: 0;
+        background: url('../img/banner/contact-bg.jpg') no-repeat center ;
+        background-size: cover;
+        opacity: .1;
     }
 }
