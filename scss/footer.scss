@@ -1,0 +1,140 @@
+footer{
+    background: $dark;
+    color: $white;
+    .bg-dark{
+        position: relative;
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000%;
+            height: 100%;
+            background-color: #1d1f25;
+            content: "";
+            margin-right: -15px;
+        }
+    }
+    .ul-block{
+        li{
+            color: #c4c4c4;
+            margin-bottom: 1.3rem;
+            font-size: .8rem;
+            div{
+                color: $white;
+                font-weight: bold;
+                margin-bottom: .8rem;
+                font-size: .95rem;
+            }
+        }
+        a{
+            color: #c4c4c4;
+            @include hover;
+            font-size: .8rem;
+        }
+    }
+
+    .btn-style{
+        background: $orange;
+    }
+}
+
+.auto-container{
+    position: relative;
+    height: 110px;
+    &:before{
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 1000%;
+        height: 100%;
+        background-color: #1d1f25;
+        content: "";
+        margin-right: -15px;
+    }
+}
+
+.inner-container{
+    background-color: #1d1f25;
+    position: relative;
+    color: $white;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+    height: 100%;
+    margin-right: 1.1rem;
+    a{
+        color: rgb(182, 182, 182);
+    }
+    &:before{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        border-right: 21px solid transparent;
+        border-bottom: 18px solid #1d1f25;
+        content: "";
+    }
+    &:after{
+        position: absolute;
+        left: 100%;
+        top: 18px;
+        bottom: 0;
+        width: 21px;
+        background-color: #1d1f25;
+        content: "";
+    }
+}
+
+.social-links{
+    li{
+        padding-left: 2rem;
+    }
+    a{
+        font-size: 1.1rem;
+        color: $white;
+        @include hover;
+    }
+}
+
+.title-ft{
+    font-weight: 900;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.map{
+    height: 240px;
+    margin-top: 1.6rem;
+}
+
+.pt-ft{
+    padding-top: 5rem;
+}
+
+
+#contact{
+    position: relative;
+    z-index: 2;
+    input, textarea{
+        font-size: .875rem;
+        font-weight: 500;
+        color: $white;
+        border: 2px solid #272930;
+        background-color: transparent;
+        border-radius: 0;
+        @include trans(all .2s);
+        &:focus{
+            box-shadow: none;
+            border-color: $orange;
+        }
+    }
+    input{
+        height: 55px;
+    }
+    textarea{
+        height: 150px;
+        resize: none;
+    }
+}

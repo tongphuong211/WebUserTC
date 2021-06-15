@@ -85,7 +85,7 @@ input[type="number"] {
 
 @mixin hover{
     &:hover{
-        color: #f54336;
+        color: $orange;
     }
 }
 
