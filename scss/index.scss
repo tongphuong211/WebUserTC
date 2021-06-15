@@ -48,7 +48,7 @@
         transform: translateY(-50%);
     
         .owl-dot{
-            border: 5px solid $dark;
+            border: 5px solid $dark-gray;
             height: 20px;
             width: 20px;
             display: block;
@@ -382,7 +382,7 @@
 }
 
 .section-contact{
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: $orange;
     background-color: rgb(3 95 137);
 
@@ -393,6 +393,7 @@
         top: 0;
         left: 0;
         background: url('../img/banner/contact-bg.jpg') no-repeat center ;
+        background-attachment: fixed;
         background-size: cover;
         opacity: .1;
     }
