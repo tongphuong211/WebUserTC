@@ -1,0 +1,198 @@
+header{
+    box-shadow: 0 2px 2px rgba(53, 53, 53, 0.25);
+    z-index: 2;
+    position: relative;
+    .container{
+        display: flex;
+    }
+}
+
+.logo-img{
+    height: 50px;
+}
+
+.header-logo{
+    width: 20%;
+    @include center-item(flex, center, center);
+}
+
+.header-main{
+    background: $dark;
+    width: 80%;
+    position: relative;
+    color: $white;
+    &:before{
+        @include befo($dark, 1000%, 100%);
+        top: 0;
+        left: 100%;
+        margin-right: -15px;
+    }
+    &__top{
+        @include center-item(flex, space-between, center);
+        background-color: #1d1f25;
+        font-size: .72rem;
+        position: relative;
+        text-transform: uppercase;
+        div{
+            padding: .85rem 2rem;
+            border-left: 1px solid rgba(175, 175, 175, 0.274);
+            &:first-child{
+                border: none;
+            }
+            &:last-child{
+                padding-left: 4rem;
+                padding-right: 2.4rem;
+            }
+        }
+        span{
+            font-weight: 800;
+        }
+        a{
+            font-weight: 900;
+            color: #09a8f0;
+            @include hover;
+        }
+        &:before{
+            @include befo(#1d1f25, 1000%, 100%);
+            top: 0;
+            left: 100%;
+            margin-right: -15px;
+        }
+    }
+    &__center{
+        padding: 1rem;
+        padding-right: 2.4rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__bottom{
+        .social{
+            width: 334px;
+            text-align: center;
+            .ul-reset{
+                justify-content: center;
+                li{
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.box-memu{
+    background: $blue;
+    width: calc(100% - 334px);
+    padding: 1.8rem 0 1.5rem;
+    position: relative;
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-right: 21px solid transparent;
+        border-top: 20px solid #24262d;
+        content: "";
+    }
+    &:after{
+        @include befo($blue, 1000%, 100%);
+        top: 0;
+        left: 100%;
+        margin-right: -15px;
+    }
+}
+
+.contact-list{
+    li{
+        padding-left: 2rem;
+        text-transform: uppercase;
+    }
+    span{
+        font-weight: 800;
+        font-size: .65rem;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+    a{
+        font-size: .7rem;
+        @include hover;
+    }
+}
+
+.menu{
+    justify-content: space-around;
+    li{
+        position: relative;
+        &:hover{
+            .sub-menu{
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+        }
+    }
+    a{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: .75rem;
+        @include hover;
+        position: relative;
+        &:before{
+            @include befo(transparent, 150%, 60px);
+            top: -20px;
+            left: -25%;
+        }
+    }
+    .sub-menu{
+        position: absolute;
+        top: 50px;
+        min-width: 240px;
+        background: $white;
+        border-radius: 5px;
+        padding: 1.3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        visibility: hidden;
+        @include trans(all .3s);
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+        a{
+            color: $dark;
+            text-transform: none;
+            position: static;
+            &:hover{
+                color: $blue;
+            }
+            &:before{
+                display: none;
+            }
+        }
+        li{
+            padding: .7rem 0;
+            border-bottom: 1px solid rgba(179, 179, 179, 0.418);
+            &:last-child{
+                padding-bottom: 0;
+                border-bottom: none;
+                &:before{
+                    display: none;
+                }
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:before{
+                @include befo(#09a8f0, 0, 1px);
+                bottom: 0;
+                left: 0;
+                @include trans(all .2s);
+            }
+            &:hover{
+                &:before{
+                    width: 100%;
+                }
+            }
+        }
+        &:before{
+            @include befo(transparent, 100%, 30px);
+            top: -30px;
+            left: 0;
+        }
+    }
+}

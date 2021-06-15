@@ -4,13 +4,9 @@ footer{
     .bg-dark{
         position: relative;
         &:before{
-            position: absolute;
+            @include befo(#1d1f25, 1000%, 100%);
             top: 0;
             left: 0;
-            width: 1000%;
-            height: 100%;
-            background-color: #1d1f25;
-            content: "";
             margin-right: -15px;
         }
     }
@@ -42,13 +38,9 @@ footer{
     position: relative;
     height: 110px;
     &:before{
-        position: absolute;
+        @include befo(#1d1f25, 1000%, 100%);
         top: 0;
         right: 100%;
-        width: 1000%;
-        height: 100%;
-        background-color: #1d1f25;
-        content: "";
         margin-right: -15px;
     }
 }
