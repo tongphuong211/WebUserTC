@@ -17,7 +17,7 @@
             left: 0;
             display: block;
             width: 200px;
-            font-size: 5.5rem;
+            font-size: 4.5rem;
             line-height: 1.1em;
             color: $white;
             font-weight: 800;
@@ -107,7 +107,7 @@
         font-weight: 600;
     }
     &--left{
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         color: $white;
         letter-spacing: -0.8px;
         line-height: 3.5rem;
@@ -121,13 +121,13 @@
         margin-top: 120px;
     }
     &--white{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         span{
             color: $white;
         }
         a{
             font-weight: 600;
-            font-size: 2.3rem;
+            font-size: 2rem;
             display: block;
         }
     }
@@ -209,7 +209,7 @@
 
 .title-center{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 900;
 }
 
@@ -395,4 +395,85 @@
         background-size: cover;
         opacity: .1;
     }
+}
+
+.box-article{
+    position: relative;
+    color: $white;
+    @mixin common-article{
+        @include befo(rgba(0, 0, 0, 0.1), 100%, 100%);
+        @include trans(all .3s ease-in-out);
+    }
+    &:before{
+        left: 0;
+        top: 0;
+        @include common-article;
+    }
+    &:after{
+        right: 0;
+        bottom: 0;
+        @include common-article;
+    }
+    &:hover{
+        &:before, &:after{
+            height: 0;
+            width: 0;
+        }
+    }
+    &__subject{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 2;
+        line-height: 20px;
+        font-weight: bold;
+        font-size: 1.15rem;
+        text-shadow: #121212 1px 1px;
+    }
+    &__description{
+        position: absolute;
+        bottom: 0;
+        padding: 3rem 1rem 1rem;
+
+        &:before{
+            @include befo(none, 100%, 100%);
+            background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.93) 100%);
+            top: 0;
+            left: 0;
+        }
+        p{
+            position: relative;
+            z-index: 2;
+            font-size: .875rem;
+            line-height: 20px;
+        }
+    }
+}
+
+.article-small{
+    .box-article__subject{
+        font-size: .875rem;
+        top: .6rem;
+        left: .6rem;
+    }
+    .box-article__description {
+        padding: 2rem .6rem .6rem;
+
+        p{
+            font-size: .65rem;
+            line-height: 1rem;
+        }
+    }
+}
+
+.img-article-big{
+    object-fit: cover;
+    height: 380px;
+    width: 100%;
+}
+
+.img-article-small{
+    object-fit: cover;
+    height: 182.5px;
+    width: 100%;
 }
