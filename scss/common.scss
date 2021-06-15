@@ -181,5 +181,31 @@ a:hover {
             font-weight: bold;
             color: $dark-blue;
         }
+        &.v2{
+            @include center-item(flex, space-between ,center);
+        }
+        div{
+            font-size: .75rem;
+        }
+    }
+    &__name{
+        font-weight: 800;
+        color: $dark-blue;
+        @include center-item(flex, start, center);
+        &:hover{
+            color: $orange;
+        }
+        img{
+            margin-right: .8rem;
+        }
+        &.visit{
+            color: #F98D2A;
+        }
+        &.heli{
+            color: #10CB2E;
+        }
+        &.seaplane{
+            color: #14A1CD;
+        }
     }
 }
