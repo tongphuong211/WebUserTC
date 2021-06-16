@@ -3,8 +3,9 @@ footer{
     color: $white;
     .bg-dark{
         position: relative;
-        &:before{
+        &::before{
             @include befo(#1d1f25, 1000%, 100%);
+
             top: 0;
             left: 0;
             margin-right: -15px;
@@ -24,8 +25,8 @@ footer{
         }
         a{
             color: #c4c4c4;
-            @include hover;
             font-size: .8rem;
+            @include hover;
         }
     }
 
@@ -37,8 +38,9 @@ footer{
 .auto-container{
     position: relative;
     height: 110px;
-    &:before{
+    &::before{
         @include befo(#1d1f25, 1000%, 100%);
+
         top: 0;
         right: 100%;
         margin-right: -15px;
@@ -57,7 +59,7 @@ footer{
     a{
         color: rgb(182, 182, 182);
     }
-    &:before{
+    &::before{
         position: absolute;
         left: 100%;
         top: 0;
@@ -65,7 +67,7 @@ footer{
         border-bottom: 18px solid #1d1f25;
         content: "";
     }
-    &:after{
+    &::after{
         position: absolute;
         left: 100%;
         top: 18px;
@@ -109,6 +111,13 @@ footer{
 #contact{
     position: relative;
     z-index: 2;
+    input{
+        height: 55px;
+    }
+    textarea{
+        height: 150px;
+        resize: none;
+    }
     input, textarea{
         font-size: .875rem;
         font-weight: 500;
@@ -121,12 +130,5 @@ footer{
             box-shadow: none;
             border-color: $orange;
         }
-    }
-    input{
-        height: 55px;
-    }
-    textarea{
-        height: 150px;
-        resize: none;
     }
 }

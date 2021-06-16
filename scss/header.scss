@@ -21,14 +21,17 @@ header{
     width: 80%;
     position: relative;
     color: $white;
-    &:before{
+
+    &::before{
         @include befo($dark, 1000%, 100%);
+
         top: 0;
         left: 100%;
         margin-right: -15px;
     }
     &__top{
         @include center-item(flex, space-between, center);
+
         background-color: #1d1f25;
         font-size: .72rem;
         position: relative;
@@ -52,8 +55,9 @@ header{
             color: #09a8f0;
             @include hover;
         }
-        &:before{
+        &::before{
             @include befo(#1d1f25, 1000%, 100%);
+
             top: 0;
             left: 100%;
             margin-right: -15px;
@@ -84,7 +88,7 @@ header{
     width: calc(100% - 334px);
     padding: 1.8rem 0 1.5rem;
     position: relative;
-    &:before{
+    &::before{
         position: absolute;
         left: 0;
         top: 0;
@@ -92,8 +96,9 @@ header{
         border-top: 20px solid #24262d;
         content: "";
     }
-    &:after{
+    &::after{
         @include befo($blue, 1000%, 100%);
+
         top: 0;
         left: 100%;
         margin-right: -15px;
@@ -119,6 +124,8 @@ header{
 
 .menu{
     justify-content: space-around;
+    position: relative;
+    z-index: 99;
     li{
         position: relative;
         &:hover{
@@ -133,10 +140,12 @@ header{
         text-transform: uppercase;
         font-weight: 700;
         font-size: .75rem;
-        @include hover;
         position: relative;
-        &:before{
+        @include hover;
+       
+        &::before{
             @include befo(transparent, 150%, 60px);
+
             top: -20px;
             left: -25%;
         }
@@ -151,8 +160,9 @@ header{
         opacity: 0;
         transform: translateY(30px);
         visibility: hidden;
-        @include trans(all .3s);
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+        @include trans(all .3s);
+       
         a{
             color: $dark;
             text-transform: none;
@@ -160,7 +170,7 @@ header{
             &:hover{
                 color: $blue;
             }
-            &:before{
+            &::before{
                 display: none;
             }
         }
@@ -170,27 +180,31 @@ header{
             &:last-child{
                 padding-bottom: 0;
                 border-bottom: none;
-                &:before{
+                &::before{
                     display: none;
                 }
             }
+            
             &:first-child{
                 padding-top: 0;
             }
-            &:before{
+            
+            &::before{
                 @include befo(#09a8f0, 0, 1px);
-                bottom: 0;
+
+                bottom: -1px;
                 left: 0;
                 @include trans(all .2s);
             }
             &:hover{
-                &:before{
+                &::before{
                     width: 100%;
                 }
             }
         }
-        &:before{
+        &::before{
             @include befo(transparent, 100%, 30px);
+
             top: -30px;
             left: 0;
         }

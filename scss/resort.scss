@@ -2,8 +2,10 @@
     height: 240px;
     background: $dark;
     position: relative;
-    &:before{
+    z-index: 1;
+    &::before{
         @include befo(rgba(21, 116, 194, 0.3), 100%, 100%);
+
         top: 0;
         left: 0;
         z-index: 2;
@@ -26,7 +28,7 @@
 .breadcrumb-title{
     position: absolute;
     top: 50%;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: $white;
     font-weight: 800;
     text-transform: uppercase;
@@ -38,12 +40,12 @@
 .bread-crumb{
     position: absolute;
     bottom: 0;
-    right: 20%;
+    right: 18.4%;
     z-index: 3;
     color: $white;
     background: $dark;
     padding: 1rem 1rem 1rem 2.5rem;
-    &:before{
+    &::before{
         position: absolute;
         left: 100%;
         top: 18px;
@@ -52,7 +54,7 @@
         background-color: $dark;
         content: "";
     }
-    &:after{
+    &::after{
         position: absolute;
         left: 100%;
         top: 0;
@@ -68,18 +70,217 @@
         margin-right: 1rem;
         padding-right: 1rem;
         position: relative;
+        @include hover;
         &.active{
             color: $white;
             padding-right: 0;
-            &:before{
+            &::before{
                 display: none;
             }
         }
-        &:before{
+        &::before{
             @include befo($blue, 3px, 3px);
+            
             bottom: 2px;
             right: 0;
             border-radius: 50%;
+        }
+    }
+}
+
+.nav-tabs-resort{
+    border-bottom: none;
+    background: $white;
+    display: flex;
+    .nav-item{
+        font-size: .75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 0;
+        width: calc(100% / 6);
+        padding: 1.5rem 1rem;
+        position: relative;
+        border: none;
+        @include center-item(flex, center, center);
+        &.active{
+            background: $blue;
+            color: $white;
+        }
+        &:hover{
+            background: $blue;
+            color: $white;
+        }
+        &::before{
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-right: 18px solid #fff;
+            border-bottom: 21px solid transparent;
+            content: "";
+        }
+    }
+}
+
+@mixin common-befo{
+    &::before{
+        position: absolute;
+        left: 0;
+        right: 21px;
+        top: -1rem;
+        height: 1rem;
+        background-color: $dark;
+        content: "";
+    }
+    &::after{
+        position: absolute;
+        right: 0;
+        top: -1rem;
+        border-bottom: 1rem solid $dark;
+        border-right: 21px solid transparent;
+        content: "";
+    }
+}
+
+#search-resort{
+    background: $dark;
+    padding: 0 1.5rem 1rem;
+    position: relative;
+    @include common-befo;
+
+    .form-group{
+        display: flex;
+    }
+    input{
+        width: 80%;
+    }
+    .btn{
+        width: 20%;
+        font-size: 1.3rem;
+    }
+
+    input, .btn{
+        height: 50px;
+        color: $white;
+        background: transparent;
+        border: none;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+.box-border{
+    border: 1px solid rgb(216, 216, 216);
+    border-top: none;
+    padding: 1rem 1.5rem;
+}
+
+.title-box-border{
+    position: relative;
+    background: $dark;
+    padding: .3rem 1.5rem 1.2rem;
+    color: $white;
+    font-weight: 800;
+    font-size: .9rem;
+    text-transform: uppercase;
+    @include common-befo;
+}
+
+.category-v2{
+    li{
+        padding: .6rem 0;
+    }
+    a{
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 600;
+        @include hover;
+    }
+}
+
+.img-relate{
+    height: 90px;
+    width: 90px;
+    border-radius: 3px;
+}
+
+.media-relate{
+    margin-bottom: 1.3rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.img-banner-resort{
+    height: 423px;
+    object-fit: center;
+}
+
+.banner-detail-owl{
+    position: relative;
+    .owl-dots{
+        display: none;
+    }
+    .owl-nav{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        button{
+            background: rgba(0, 0, 0, 0.671) !important;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+        i{
+            color: $white;
+            font-size: 2rem;
+        }
+        .owl-next{
+            right: 0;
+        }
+    }
+}
+
+.nav-tabs-detail{
+    border-bottom: 1px solid $white;
+    .nav-link{
+        text-transform: uppercase;
+        font-size: .75rem;
+        border: none;
+        border-radius: 0;
+        font-weight: bold;
+        position: relative;
+        background-color: $white;
+        padding: .4rem 2rem .8rem;
+        &::before{
+            position: absolute;
+            left: 0;
+            right: 10px;
+            top: -.5rem;
+            height: .5rem;
+            background-color: $white;
+            content: "";
+            @include trans(all .2s);
+        }
+        &::after{
+            position: absolute;
+            right: 0;
+            top: -.5rem;
+            border-bottom: .5rem solid $white;
+            border-right: 10px solid transparent;
+            content: "";
+            @include trans(all .2s);
+        }
+        &.active{
+            background: $blue;
+            color: $white;
+            &::before{
+                background-color: $blue;
+            }
+            &::after{
+                border-bottom: .5rem solid $blue;
+            }
         }
     }
 }

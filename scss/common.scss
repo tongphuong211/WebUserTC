@@ -17,7 +17,7 @@
 }
 
 $dark: #24262d;
-$black: #000000;
+$black: #000;
 $orange: #DE9E53;
 $red: #FF3100;
 $light-gray: #F4F5FB;
@@ -59,6 +59,17 @@ input[type="number"] {
 
 [data-line="4"] {
     -webkit-line-clamp: 4;
+}
+
+.row-gutter-10 {
+    margin-right: -10px;
+    margin-left: -10px;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
 }
 
 .row-gutter-8 {
@@ -133,7 +144,7 @@ a:hover {
     font-weight: bold;
     font-size: .8rem;
     text-transform: uppercase;
-    &:before{
+    &::before{
         @include befo($orange, 100%, 100%);
 
         top: 0;
@@ -150,12 +161,12 @@ a:hover {
     }
     &:hover{
         transform: scale(0.95);
+        color: $white;
         box-shadow: 0 12px 24px -10px rgba(21, 59, 93, 0.46);
-        &:before{
+        &::before{
             transform: scale(1,1);
             transform-origin: bottom left;
         }
-        color: $white;
     }
 }
 
@@ -166,6 +177,7 @@ a:hover {
     &__subject{
         font-weight: 800;
         color: $dark-blue;
+        line-height: 18px;
         &:hover{
             color: $orange;
         }
@@ -177,6 +189,7 @@ a:hover {
         }
     }
     &__price{
+        font-size: .75rem;
         span{
             font-weight: bold;
             color: $dark-blue;
@@ -207,5 +220,44 @@ a:hover {
         &.seaplane{
             color: #14A1CD;
         }
+    }
+}
+
+.content-detail {
+    p, span {
+        text-align: justify;
+        font-size: .875rem;
+        line-height: 1.4rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    h1, h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+    }
+
+    h4, h5, h6 {
+        font-size: 1rem;
+    }
+
+    table {
+        max-width: 100%;
+    }
+
+    .subject {
+        color: $dark-blue;
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: .6rem;
+        line-height: 1.6rem;
     }
 }

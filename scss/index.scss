@@ -6,8 +6,9 @@
 .banner-owl{
     .item{
         position: relative;
-        &:before{
+        &::before{
             @include befo(rgba(0, 0, 0, 0.3), 100%, 100%);
+            
             top: 0;
             left: 0;
         }
@@ -24,9 +25,9 @@
             text-transform: uppercase;
             letter-spacing: -1px;
             opacity: 0;
-            @include trans(all 1s ease .6s);
             transform: translateX(-100px);
             text-shadow: 1.5px 1.5px rgb(17, 17, 17);
+            @include trans(all 1s ease .6s);
         }
     }
 
@@ -70,8 +71,8 @@
     text-align: center;
 
     >[class*="col-"] {
-        padding-right: 1.525rem;
-        padding-left: 1.525rem;
+        padding-right: .525rem;
+        padding-left: .525rem;
     }
     a {
         color: #c2c5d4;
@@ -88,7 +89,34 @@
 }
 
 .col-partner {
-    width: calc(100%/6);
+    width: calc( 100% / 6 );
+}
+
+.inner{
+    position: relative;
+    background-color: $blue;
+    padding: 2rem 1rem;
+    box-shadow: rgba(21, 59, 93, 0.46) 0 4px 4px -10px;
+    @include trans(all .2s);
+    &::before{
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-left: 20px solid transparent;
+        border-top: 20px solid #f4f5fb;
+        content: "";
+    }
+    p{
+        @include trans(all .2s);
+    }
+    &:hover{
+        background: $dark-blue;
+        transform: translateY(-8px);
+        box-shadow: rgba(21, 59, 93, 0.46) 0 12px 24px -10px;
+        p{
+            color: $white;
+        }
+    }
 }
 
 .title{
@@ -140,14 +168,15 @@
     margin-right: 1rem;
     &:hover{
         color: $dark-blue;
-        &:before{
+        &::before{
             right: -1.1rem;
             border: solid $dark-blue;
             border-width: 0 1.5px 1.5px 0;
         }
     }
-    &:before{
+    &::before{
         @include befo(none, 0, 0);
+
         top: 5px;
         right: -0.7rem;
         border: solid $blue;
@@ -161,11 +190,12 @@
 
 .item-order{
     &__img{
-        border-radius: 1rem;
+        border-radius: .3rem;
         position: relative;
         overflow: hidden;
-        &:before{
+        &::before{
             @include befo(none, 100%, 0);
+
             background-image: linear-gradient(147deg, $blue 0%, $dark-blue 74%);
             top: 0;
             left: 0;
@@ -175,7 +205,7 @@
             @include trans(all .3s);
         }
         img{
-            border-radius: 1rem;
+            border-radius: .3rem;
             height: 180px;
             @include trans(all .4s);
         }
@@ -183,7 +213,7 @@
             img{
                 transform: scale(1.1) rotate(2deg);
             }
-            &:before{
+            &::before{
                 height: 100%;
             }
             .icon-plus{
@@ -238,8 +268,9 @@
     width: 200px;
     height: 34px;
     @include center-item(flex, center, center);
-    &:before{
+    &::before{
         @include befo($dark-blue, 100%, 100%);
+
         clip-path: polygon(94% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
         top: 0;
         left: 0;
@@ -262,6 +293,7 @@
 
 .point-go-come{
     @include center-item(flex, space-around, center);
+
     img{
         height: 20px;
     }
@@ -275,8 +307,9 @@
 
 .double-arrow{
     position: relative;
-    &:before{
+    &::before{
         @include befo(none, 0, 0);
+
         top: 7px;
         left: -1.5rem;
         border: solid $blue;
@@ -286,8 +319,9 @@
         transform: rotate(-45deg);
         @include trans(all .2s);
     }
-    &:after{
+    &::after{
         @include befo(none, 0, 0);
+
         top: 7px;
         right: -1.5rem;
         border: solid $red;
@@ -301,6 +335,7 @@
 
 .time-ferry{
     @include center-item(flex, space-around, center);
+
     font-size: .75rem;
     color: $dark;
     .time-run{
@@ -313,15 +348,17 @@
     background: $dark;
     padding: 110px 0 100px;
     position: relative;
-    &:before{
+    &::before{
         @include befo($blue, 70%, 100%);
+
         background: url('../img/banner/sea-1.jpg') no-repeat;
         top: 0;
         left: 30%;
         background-size: cover;
     }
-    &:after{
+    &::after{
         @include befo(#24262d6c, 100%, 100%);
+        
         top: 0;
         left: 0;
     }
@@ -333,7 +370,7 @@
     position: relative;
     z-index: 2;
     margin-right: 5rem;
-    &:before{
+    &::before{
         position: absolute;
         left: 0;
         right: 21px;
@@ -342,7 +379,7 @@
         background-color: $white;
         content: "";
     }
-    &:after{
+    &::after{
         position: absolute;
         right: 0;
         top: -18px;
@@ -366,7 +403,7 @@
         letter-spacing: -0.6px;
         margin-bottom: 2rem;
         padding-left: 3rem;
-        &:before{
+        &::before{
             position: absolute;
             left: 0;
             top: 0;
@@ -383,13 +420,12 @@
 
 .section-contact{
     padding: 60px 0;
-    background-color: $orange;
     background-color: rgb(3 95 137);
-
     text-align: center;
     position: relative;
-    &:before{
+    &::before{
         @include befo(none, 100%, 100%);
+
         top: 0;
         left: 0;
         background: url('../img/banner/contact-bg.jpg') no-repeat center ;
@@ -406,18 +442,18 @@
         @include befo(rgba(0, 0, 0, 0.1), 100%, 100%);
         @include trans(all .3s ease-in-out);
     }
-    &:before{
+    &::before{
         left: 0;
         top: 0;
         @include common-article;
     }
-    &:after{
+    &::after{
         right: 0;
         bottom: 0;
         @include common-article;
     }
     &:hover{
-        &:before, &:after{
+        &::before, &::after{
             height: 0;
             width: 0;
         }
@@ -437,8 +473,9 @@
         bottom: 0;
         padding: 3rem 1rem 1rem;
 
-        &:before{
+        &::before{
             @include befo(none, 100%, 100%);
+            
             background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.93) 100%);
             top: 0;
             left: 0;
