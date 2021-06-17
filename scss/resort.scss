@@ -284,3 +284,220 @@
         }
     }
 }
+
+.select-day-order{
+    position: relative;
+    &::before{
+        @include befo($blue, 100%, 1px);
+
+        top: 18px;
+        left: 0;
+    }
+    .check{
+        font-size: .6rem;
+        color: $blue;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .form-group{
+        text-align: center;
+        background: $white;
+        position: relative;
+    }
+    input{
+        font-size: .85rem;
+        margin-bottom: .8rem;
+        border-color: $blue;
+        border-radius: 0;
+        color: $blue;
+        width: 160px;
+        &:focus{
+            box-shadow: none;
+            border-color: $blue;
+        }
+    }
+    &__title{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: .75rem;
+        color: $blue;
+    }
+}
+
+.col-room {
+    width: calc( 100% / 10 );
+}
+
+.room{
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 73px;
+    padding-top: 1rem;
+    &::before{
+        @include befo($orange, 20px, 20px);
+
+        border-radius: 50%;
+        left: 50%;
+        top: 12.4px;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    svg{
+        margin: auto;
+        transform: scale(1.6);
+    }
+    span{
+        position: absolute;
+        bottom: 8.5px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        font-size: .75rem;
+        font-weight: bold;
+    }
+    &.selected{
+        svg path{
+            fill: #005ca2;
+        }
+    }
+    &.over{
+        svg path{
+            fill: $dark-gray;
+        }
+    }
+}
+
+.modal-open{
+    padding-right: 0 !important;
+}
+
+.status-room{
+    font-size: .875rem;
+    position: relative;
+    padding-right: 1.5rem;
+    &::before{
+        @include befo($dark-gray, .8rem, .8rem);
+
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+
+    &.selected{
+        &::before{
+            background: #005ca2;
+        }
+    }
+
+    &.empty{
+        &::before{
+            background: $dark;
+        }
+    }
+}
+
+.title-child-detail{
+    font-size: .75rem;
+    padding: .3rem 1rem .7rem;
+    &::before{
+        top: -8px;
+        height: 8px;
+    }
+    &::after{
+        top: -8px;
+        border-bottom: 8px solid $dark;
+    }
+}
+
+.img-view-detail-room{
+    height: 230px;
+}
+
+.number-room{
+    padding-bottom: 1rem;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.day-booking-room{
+    font-size: .75rem;
+    font-weight: 600;
+    div:first-child{
+        color: $dark-gray;
+    }
+}
+
+.price-room{
+    font-weight: 800;
+    &__title{
+        
+    }
+    &__price{
+        color: #004184;
+    }
+}
+
+.select-room{
+    position: relative;
+    border-radius: .75rem;
+    overflow: hidden;
+    .close{
+        position: absolute;
+        top: .5rem;
+        right: 1rem;
+        z-index: 2;
+        color: $white;
+        font-size: 2rem;
+    }
+}
+
+.filter-area{
+    @include center-item(flex, space-between, center);
+
+    select{
+        width: 297px;
+        border-radius: 0;
+        background-color: $blue;
+        color: $white;
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-size: .875rem;
+        padding-left: 1.5rem;
+        &:focus{
+            background-color: $blue;
+            color: $white;
+            box-shadow: none;
+        }
+    }
+}
+
+.box-select{
+    position: relative;
+    background-color: $blue;
+    padding: .3rem;
+    &::before{
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-right: 17px solid $white;
+        border-bottom: 21px solid transparent;
+        content: "";
+    }
+    i{
+        font-size: 1rem;
+        color: $white;
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-68%);
+    }
+}

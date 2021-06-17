@@ -94,6 +94,16 @@
                 </div>
                 <div class="content-detail mt-lg-4 mt-3">
                     <h2 class="subject">Biệt thự ven biển - Resort Tuần Châu</h2>
+                    <div class="content__rate d-flex mt-2 mb-4">
+                        Xếp hạng: 
+                        <div class="d-flex ml-1">
+                            <img class="img-fluid" src="img/icon/star.svg" alt="...">
+                            <img class="img-fluid" src="img/icon/star.svg" alt="...">
+                            <img class="img-fluid" src="img/icon/star.svg" alt="...">
+                            <img class="img-fluid" src="img/icon/star.svg" alt="...">
+                            <img class="img-fluid" src="img/icon/star.svg" alt="...">
+                        </div>
+                    </div>
                     <p>Biển Phan Thiết được lọt top 10 bãi biển đẹp nhất Châu Á, top 1 bãi biển đẹp nhất Đông Nam Á, top 6 điểm đến ấn tượng nhất Việt Nam.
                         Novaworld Phan Thiết tổ hợp nghỉ dưỡng, giải trí nằm trên bãi biển xinh đẹp Phan Thiết có vị trí tuyệt đẹp.</p>
                     <p>- Vị trí đắc địa: Dân cư xung quanh đông đúc, không khí trong lành, Cách đường lớn ĐT 762 khoảng 
@@ -110,14 +120,160 @@
                     </p>
                 </div>
                 <div class="bg-white mt-lg-4 mt-3 p-3">
-                    
+                    <div class="flex-item select-day-order mt-2">
+                        <div class="form-group">
+                            <input type="date" class="form-control" value="2021-06-16"/>
+                            <div class="check">Check in</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" value="2021-06-16"/>
+                            <div class="check">Check out</div>
+                        </div>
+                        <div class="select-day-order__title">Ngày sử dụng</div>
+                    </div>
+                    <hr/>
+                    <div class="flex-item p-3 mb-3">
+                        <div class="status-room selected">Đã chọn</div>
+                        <div class="status-room empty">Phòng trống</div>
+                        <div class="status-room">Hết phòng</div>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1024</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room selected" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1402</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room over">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                        <div class="col-room mb-3">
+                            <a href="#" class="room" data-toggle="modal" data-target="#orderRoom">
+                                <svg width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0C5.59073 0 0 5.5896 0 12.5V38.5714C0 41.3329 2.23858 43.5714 5 43.5714H20C22.7614 43.5714 25 41.3329 25 38.5714V30.1011C25 28.7317 24.1412 27.4816 22.8632 26.99L9.74229 21.9431C5.6924 20.386 3.24083 16.4531 3.33469 12.4666C3.41104 7.4595 7.44458 3.35135 12.4681 3.33344C17.5529 3.30978 21.6668 7.43844 21.6668 12.5001C21.6668 13.4375 22.4358 14.1782 23.3485 14.1667C24.2506 14.159 25.0068 13.3524 24.9998 12.4055C24.9491 5.55498 19.3925 0 12.5 0Z" fill="black"/>
+                                </svg>
+                                <span>1023</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav nav-tabs nav-tabs-detail mt-lg-8 mt-6" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active"  data-toggle="tab" href="#quy-dinh" role="tab">Quy định</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#tien-ich" role="tab">Tiện ích</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#lien-he" role="tab">Liên hệ</a>
                 </div>
-                <div class="tab-content pt-lg-6 pt-4">
+                <div class="tab-content px-4 py-lg-6 py-4 bg-white">
                     <div class="tab-pane fade show active content-detail" id="quy-dinh" role="tabpanel">
                         <p>- Vị trí đắc địa: Dân cư xung quanh đông đúc, không khí trong lành, Cách đường lớn ĐT 762 khoảng 
                             500m, cách chợ khu phố 1 khoảng 800m, cách khu du lịch Đảo Ó khoảng 1,5km, cách UBND thị trấn 
@@ -213,6 +369,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- modal-orderRoom -->
+    <div class="modal fade" id="orderRoom" tabindex="-1" role="dialog" aria-labelledby="orderRoomTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content select-room">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fal fa-times"></i>
+            </button>
+            <div class="modal-body p-0">
+                <img class="img-fluid img img-view-detail-room" src="img/banner/khunghiduong-5.jpg" alt="...">
+                <div class="px-4 py-3">
+                    <div class="number-room">Phòng 1024</div>
+                    <hr/>
+                    <div class="flex-item price-room py-2">
+                        <div class="price-room__title">Giá phòng</div>
+                        <div class="price-room__price">99999 đ</div>
+                    </div>
+                    <hr/>
+                    <div class="flex-item day-booking-room py-2">
+                        <div>17/06/2021</div>
+                        <div>99999 đ/phòng/đêm</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-style btn-style--close" data-dismiss="modal"><span>Thoát</span></button>
+            <button type="button" class="btn btn-style btn-style--select"><span>Chọn phòng</span></button>
+            </div>
+        </div>
         </div>
     </div>
     <footer>

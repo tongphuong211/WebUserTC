@@ -168,6 +168,28 @@ a:hover {
             transform-origin: bottom left;
         }
     }
+    @mixin common{
+        padding: .8rem 2rem;
+        font-size: .7rem;
+        &:hover{
+            transform: scale(1);
+        }
+    }
+    &--close{
+        @include common;
+
+        &::before{
+            background: rgb(170, 3, 3);
+        }
+    }
+    &--select{
+        @include common;
+
+        background: $blue;
+        &::before{
+            background: #28a745;
+        }
+    }
 }
 
 .content{
@@ -259,5 +281,36 @@ a:hover {
         text-transform: uppercase;
         margin-bottom: .6rem;
         line-height: 1.6rem;
+    }
+    .content__rate{
+        font-weight: bold;
+        color: $dark-blue;
+        img{
+            object-fit: contain;
+            margin-left: .2rem;
+        }
+    }
+}
+
+.pagination{
+    @include center-item(flex, flex-end, center);
+
+    width: calc(100% - 300px);
+    padding-left: 2rem;
+    .page-link{
+       background: $blue;
+       color: $white;
+       font-size: .75rem;
+       font-weight: bold;
+       border: 1px solid $white;
+       &.active{
+           background: $dark-blue;
+       }
+       &:focus{
+           box-shadow: none;
+       }
+       &:hover{
+            background: $dark-blue;
+       }
     }
 }
