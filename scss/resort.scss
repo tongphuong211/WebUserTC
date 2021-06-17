@@ -522,6 +522,11 @@
             color: $dark-blue;
             font-weight: bold;
         }
+        .vat{
+            color: $dark-gray;
+            font-weight: 500;
+            font-size: .75rem;
+        }
     }
 }
 
@@ -557,5 +562,20 @@
         text-transform: uppercase;
         transform: translateY(15%);
         color: $dark-blue;
+    }
+}
+
+.total-money{
+    font-weight: 600;
+    span{
+        font-weight: 800;
+        color: rgb(201, 8, 8);
+        font-size: 1.3rem;
+        padding-left: .5rem;
+        &:last-child{
+            color: $dark-gray;
+            font-weight: 500;
+            font-size: .75rem;
+        }
     }
 }
