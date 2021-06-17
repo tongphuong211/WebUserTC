@@ -143,7 +143,7 @@
 
 #search-resort{
     background: $dark;
-    padding: 0 1.5rem 1rem;
+    padding: 0 1.5rem .7rem;
     position: relative;
     @include common-befo;
 
@@ -152,6 +152,7 @@
     }
     input{
         width: 80%;
+        padding-top: 0;
     }
     .btn{
         width: 20%;
@@ -441,6 +442,9 @@
     }
     &__price{
         color: #004184;
+    }
+    strong{
+        color: #d41b1b;
     }
 }
 

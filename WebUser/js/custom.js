@@ -18,7 +18,28 @@ $(function () {
         }
     }
   });
+  
+  $(".show-VAT").on("click", function(){
+    $(".load-VAT").toggleClass("show-form-VAT");
+  });
+
+  // $("#plus").on("click", function(){
+  //   $(this).parentNode.querySelector('[type=number]').stepDown();
+  // });
 });
+
+function changeItemOrder(){
+  $("#orderQuantity").on("change",
+  function (e) {
+      var quantity = $(this).val();
+      var price = $("#priceTicket").val();
+      var total = quantity * price;
+      $("#total").text(total);
+      console.log(quantity);
+      console.log(price);
+      console.log(total);
+  });
+}
 
 function bannerJs() {
   $(".banner-owl").owlCarousel({

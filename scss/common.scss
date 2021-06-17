@@ -27,16 +27,16 @@ $white: #fff;
 $dark-blue: #1E2958;
 $blue: #007DB6;
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
 
-/* Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
+// /* Firefox */
+// input[type="number"] {
+//     -moz-appearance: textfield;
+// }
 
 .truncate-h {
     overflow: hidden;
@@ -192,6 +192,25 @@ a:hover {
     }
 }
 
+.btn-stylev2{
+    border-radius: 3px;
+    background: $blue;
+    padding: .6rem 1.5rem;
+    color: $white;
+    text-transform: uppercase;
+    font-size: .75rem;
+    min-width: 100px;
+    @include trans(all .2s);
+    &:focus{
+        box-shadow: none;
+    }
+    &:hover{
+        color: $white;
+        box-shadow: 0 12px 24px -10px rgba(21, 59, 93, 0.46);
+        transform: scale(.95);
+    }
+}
+
 .content{
     font-size: .85rem;
     font-weight: 500;
@@ -250,6 +269,10 @@ a:hover {
         text-align: justify;
         font-size: .875rem;
         line-height: 1.4rem;
+    }
+
+    p{
+        margin-bottom: .7rem;
     }
 
     img {
