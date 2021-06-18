@@ -18,15 +18,28 @@ $(function () {
         }
     }
   });
+
+  AOS.init();
   
   $(".show-VAT").on("click", function(){
     $(".load-VAT").toggleClass("show-form-VAT");
   });
 
-  // $("#plus").on("click", function(){
-  //   $(this).parentNode.querySelector('[type=number]').stepDown();
-  // });
+  //scroll menu
+  $(window).scroll( () => {
+		var windowTop = $(window).scrollTop();
+		windowTop > 50 ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
+		// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
+	});
 });
+
+function phoneCountryJs(){
+  var input = document.querySelector("#phoneList");
+  window.intlTelInput(input, {
+      initialCountry: "vn",
+    utilsScript: "js/utils.js",
+  });
+}
 
 function changeItemOrder(){
   $("#orderQuantity").on("change",
