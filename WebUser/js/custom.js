@@ -34,10 +34,7 @@ function changeItemOrder(){
       var quantity = $(this).val();
       var price = $("#priceTicket").val();
       var total = quantity * price;
-      $("#total").text(total);
-      console.log(quantity);
-      console.log(price);
-      console.log(total);
+      $("#total").text(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(total));
   });
 }
 

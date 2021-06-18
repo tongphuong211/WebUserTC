@@ -188,7 +188,7 @@
     <!-- modal-orderRoom -->
     <div class="modal fade" id="orderticket" tabindex="-1" role="dialog" aria-labelledby="orderRoomTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content select-room">
+        <div class="modal-content radius-modal select-room">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <i class="fal fa-times"></i>
             </button>
@@ -197,38 +197,39 @@
                     <div class="px-4 py-3">
                         <div class="title-modal text-center">Công viên nước - Tuần Châu</div>
                         <hr/>
-                        <div class="flex-item price-room py-2">
+                        <div class="flex-item price-room py-1">
                             <div class="price-room__title">Ngày sử dụng</div>
                             <input class="form-control date-input" type="date" value="2021-06-17"/>
                         </div>
                         <hr/>
-                        <div class="flex-item price-room py-2">
+                        <div class="flex-item price-room py-1">
                             <div class="price-room__title">Số lượng vé</div>
                             <div class="custom-input-number">
-                                <button type="button" class="btn" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+                                <!-- <button type="button" class="btn" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
                                     -
-                                </button>
+                                </button> -->
                                 <input type="number" id="orderQuantity" name="" placeholder="Width" min="1" max="1000" value="10">
-                                <button type="button" class="btn" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+                                <!-- <button type="button" class="btn" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
                                     +
-                                </button>
+                                </button> -->
                             </div>
                             <input type="hidden" id="priceTicket" name="priceTicket" value="330000"/>
                         </div>
                         <hr/>
-                        <div class="flex-item price-room py-2">
+                        <div class="flex-item price-room py-1">
                             <div class="modal-room__title">Tổng tiền</div>
                             <div class="modal-payment__bold blue text-right mb-0">
-                                <span id="total">330000</span><strong>đ</strong>
+                                <span id="total">330.000 đ</span>
+                                <!-- <strong>đ</strong> -->
                                 <div class="vat">(Đã bao gồm VAT)</div>
                             </div>
                         </div>
                         <!--<div class="description">
                             Thông tin người đặt
                         </div>-->
-                        <div class="form-group">
+                        <div class="form-group mt-4">
                             <label for="fullName">Họ và tên</label>
-                            <input type="number" class="form-control" id="fullName" placeholder="">
+                            <input type="text" class="form-control" id="fullName" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="phoneBumber">Số điện thoại</label>

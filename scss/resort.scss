@@ -452,6 +452,7 @@
     position: relative;
     border-radius: .75rem;
     overflow: hidden;
+    
     .close{
         position: absolute;
         top: .5rem;
@@ -459,6 +460,15 @@
         z-index: 2;
         color: $white;
         font-size: 2rem;
+    }
+}
+
+.radius-modal{
+    border-radius: .35rem;
+    border-top: 5px solid $blue;
+    .close{
+        color: $dark-blue;
+        font-size: 1rem;
     }
 }
 
