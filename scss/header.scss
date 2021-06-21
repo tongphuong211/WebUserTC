@@ -11,7 +11,7 @@ header{
 }
 
 .logo-img{
-    height: 50px;
+    height: 100px;
 }
 
 .header-logo{
@@ -56,7 +56,7 @@ header{
         }
         a{
             font-weight: 900;
-            color: #09a8f0;
+            color: $blue;
             @include hover;
             span{
                 transition: all 0s;
@@ -233,7 +233,8 @@ header{
         padding: 0 2.4rem;
     }
     .logo-img {
-        height: 30px;
+        height: 50px;
+        padding: .3rem 0;
     }
 
     .box-memu{
