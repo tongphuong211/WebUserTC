@@ -60,3 +60,56 @@
         }
     }
 }
+
+.share {
+    align-items: center;
+    margin-bottom: 1.2rem;
+
+    li:first-child {
+        padding-right: 15px;
+    }
+
+    li {
+        padding-right: 8px;
+        font-size: .875rem;
+        font-weight: 600;
+
+        &:hover {
+            img {
+                transform: scale(1.1, 1.1);
+            }
+        }
+
+        img {
+            width: 30px;
+        }
+
+        button {
+            background: #3b5997;
+            height: 30px;
+            width: 35px;
+            border: none;
+            border-radius: 3px;
+            @include trans(all .2s);
+
+            color: $white;
+
+            &:hover {
+                background: $orange;
+                color: $white;
+            }
+        }
+
+        .instagram {
+            background: #dc3472;
+        }
+
+        .twitter {
+            background: #1da1f2;
+        }
+
+        .linkedin {
+            background: #0077b5;
+        }
+    }
+}
