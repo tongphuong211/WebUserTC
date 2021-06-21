@@ -1,24 +1,4 @@
 $(function () {
-  $(".order-room").owlCarousel({
-    margin: 20,
-    autoplay: false,
-    //lazyLoad: true,
-    responsiveClass: true,
-    responsive: {
-        0: {
-            margin: 10,
-            items: 2
-        },
-        600: {
-            margin: 15,
-            items: 3
-        },
-        1000: {
-            items: 4
-        }
-    }
-  });
-
   AOS.init();
   
   $(".show-VAT").on("click", function(){
@@ -28,7 +8,7 @@ $(function () {
   //scroll menu
   $(window).scroll( () => {
 		var windowTop = $(window).scrollTop();
-		windowTop > 50 ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
+		 windowTop > 50 ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
 		// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
 	});
 });
@@ -37,7 +17,7 @@ function phoneCountryJs(){
   var input = document.querySelector("#phoneList");
   window.intlTelInput(input, {
       initialCountry: "vn",
-    utilsScript: "js/utils.js",
+    utilsScript: "js/utils.js", 
   });
 }
 
@@ -61,6 +41,28 @@ function bannerJs() {
       autoplay: true,
       autoplayTimeout: 8000,
       items: 1
+  });
+}
+
+function slideHomeJs(){
+  $(".order-room").owlCarousel({
+    margin: 20,
+    autoplay: false,
+    //lazyLoad: true,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            margin: 10,
+            items: 2
+        },
+        600: {
+            margin: 15,
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
   });
 }
 

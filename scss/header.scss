@@ -241,3 +241,69 @@ header{
         padding: 1.2rem 0;
     }
 }
+
+.identity{
+    position: relative;
+    &__submenu{
+        position: absolute;
+        top: 38px;
+        min-width: 240px;
+        background: $white;
+        border-radius: 5px;
+        padding: 1rem 1.3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
+        @include trans(all .3s);
+        a{
+            color: $dark;
+            text-transform: none;
+            font-weight: bold;
+            font-size: .8rem;
+            &:hover{
+                color: $blue;
+            }
+            &::before{
+                display: none;
+            }
+        }
+        li{
+            padding: .7rem 0;
+            position: relative;
+            border-bottom: 1px solid rgba(179, 179, 179, 0.418);
+            &:last-child{
+                padding-bottom: 0;
+                border-bottom: none;
+                &::before{
+                    display: none;
+                }
+            }
+            
+            &:first-child{
+                padding-top: 0;
+            }
+            
+            &::before{
+                @include befo($blue, 0, 1px);
+
+                bottom: -1px;
+                left: 0;
+                @include trans(all .2s);
+            }
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &:hover{
+        .identity__submenu{
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+}
