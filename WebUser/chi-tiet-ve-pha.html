@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin thủy phi cơ</title>
+    <title>Thông tin vé phà</title>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -68,13 +68,13 @@
         </div>
     </header>
     <div class="breadcrumb-wrapper">
-        <img src="img/banner/thuyphicocover.jpg" class="breadcrumb-img" alt="..."/>
+        <img src="img/banner/phacover.jpg" class="breadcrumb-img" alt="..."/>
         <div class="container">
-            <h1 class="breadcrumb-title">Thủy phi cơ ngắm cảnh</h1>
+            <h1 class="breadcrumb-title">CẢNG HCMC - CẢNG TUẦN CHÂU</h1>
             <div class="bread-crumb">
                 <a href="index.html">Trang chủ</a>
-                <a href="thuy-phi-co.html">Thủy phi cơ</a>
-                <a href="#" class="active">Thủy phi cơ ngắm cảnh</a>
+                <a href="ve-pha.html">Vé phà</a>
+                <a href="#" class="active">Cảng HCMC - Cảng tuần châu</a>
             </div>
         </div>
     </div>
@@ -83,18 +83,18 @@
             <div class="col-sm-12 col-lg-8">
                 <div class="owl-carousel banner-detail-owl">
                     <div class="item">
-                        <img class="img-fluid img img-banner-resort" src="img/banner/plane-2.jpg" alt="..." />
+                        <img class="img-fluid img img-banner-resort" src="img/banner/pha-4.jpg" alt="..." />
                     </div>
                     <div class="item">
-                        <img class="img-fluid img img-banner-resort" src="img/banner/plane-3.jpg" alt="..." />
+                        <img class="img-fluid img img-banner-resort" src="img/banner/pha-3.jpg" alt="..." />
                     </div>
                     <div class="item">
-                        <img class="img-fluid img img-banner-resort" src="img/banner/plane-4.jpg" alt="..." />
+                        <img class="img-fluid img img-banner-resort" src="img/banner/pha-1.jpg" alt="..." />
                     </div>
                 </div>
                 <div class="content-detail mt-lg-4 mt-3">
                     <div class="flex-item mb-3">
-                        <h2 class="subject mb-0">Thủy phi cơ ngắm cảnh</h2>
+                        <h2 class="subject mb-0">Cảng HCMC - Cảng Tuần Châu</h2>
                         <button class="btn btn-stylev2" data-toggle="modal" data-target="#orderticket">Đặt vé</button>
                     </div>
                     <p>Biển Phan Thiết được lọt top 10 bãi biển đẹp nhất Châu Á, top 1 bãi biển đẹp nhất Đông Nam Á, top 6 điểm đến ấn tượng nhất Việt Nam.
@@ -185,7 +185,7 @@
             </div>
         </div>
     </div>
-    <!-- modal-orderRoom -->
+    <!-- modal -->
     <div class="modal fade" id="orderticket" tabindex="-1" role="dialog" aria-labelledby="orderRoomTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content radius-modal select-room">
@@ -195,7 +195,7 @@
             <div class="modal-body p-0">
                 <form class="form-payment">
                     <div class="px-4 py-3">
-                        <div class="title-modal text-center">Thủy phi cơ ngắm cảnh</div>
+                        <div class="title-modal text-center">Cảng HCMC - Cảng Tuần Châu</div>
                         <hr/>
                         <div class="flex-item price-room py-1">
                             <div class="price-room__title">Ngày sử dụng</div>
@@ -212,6 +212,24 @@
                                 <!-- <button type="button" class="btn" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
                                     +
                                 </button> -->
+                            </div>
+                            <input type="hidden" id="priceTicket" name="priceTicket" value="330000"/>
+                        </div>
+                        <hr/>
+                        <div class="flex-item price-room py-1">
+                            <div class="price-room__title">Phương tiện</div>
+                            <select class="form-control" id="vehicle">
+                                <option>Xe máy</option>
+                                <option>Oto dưới 9 chỗ</option>
+                                <option>Oto từ 9 đến 23 chỗ</option>
+                                <option>Oto từ 24 đến 29 chỗ</option>
+                            </select>
+                        </div>
+                        <hr/>
+                        <div class="flex-item price-room py-1">
+                            <div class="price-room__title">Số lượng phương tiện</div>
+                            <div class="custom-input-number">
+                                <input type="number" id="" name="" placeholder="Width" min="1" max="1000" value="1">
                             </div>
                             <input type="hidden" id="priceTicket" name="priceTicket" value="330000"/>
                         </div>

@@ -465,7 +465,7 @@
 }
 
 .form-payment{
-    input{
+    input, select{
         border-radius: 3px;
         height: 40px;
         font-size: .85rem;
@@ -489,6 +489,10 @@
         text-transform: uppercase;
         transform: translateY(15%);
         color: $dark-blue;
+    }
+
+    #vehicle{
+        width: 200px;
     }
 }
 
