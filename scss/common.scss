@@ -277,8 +277,9 @@ a:hover {
         font-weight: bold;
         margin-bottom: 1rem;
         line-height: 20px;
+        color: $blue;
         &:hover{
-            color: $blue;
+            color: $orange;
         }
     }
 }
@@ -350,17 +351,17 @@ a:hover {
     .page-link{
        background: $blue;
        color: $white;
-       font-size: .75rem;
+       font-size: .85rem;
        font-weight: bold;
        border: 1px solid $white;
        &.active{
-           background: $dark-blue;
+           background: $orange;
        }
        &:focus{
            box-shadow: none;
        }
        &:hover{
-            background: $dark-blue;
+            background: $orange;
        }
     }
 }

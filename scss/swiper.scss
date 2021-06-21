@@ -165,7 +165,9 @@
     @media screen and (max-width: 576px) {
       width: 100%;
     }
-    
+    &:hover{
+      color: $white;
+    }
   }
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 10px;
