@@ -349,9 +349,9 @@
 }
 
 .price-room{
-    font-weight: 800;
+    font-weight: bold;
     &__title{
-        
+        font-size: .8rem;
     }
     &__price{
         color: #004184;
@@ -466,7 +466,7 @@
 
 .form-payment{
     input, select{
-        border-radius: 3px;
+        border-radius: 1px;
         height: 40px;
         font-size: .85rem;
         &:focus{
@@ -489,6 +489,7 @@
         text-transform: uppercase;
         transform: translateY(15%);
         color: $dark-blue;
+        font-weight: bold;
     }
 
     #vehicle{

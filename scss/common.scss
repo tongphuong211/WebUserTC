@@ -200,7 +200,7 @@ a:hover {
     padding: .6rem 1.5rem;
     color: $white;
     text-transform: uppercase;
-    font-size: .75rem;
+    font-size: .73rem;
     min-width: 100px;
     @include trans(all .2s);
     &:focus{
@@ -453,5 +453,52 @@ a:hover {
             right: 0;
             border-radius: 50%;
         }
+    }
+}
+
+.modal-dialog {
+    max-width: 650px;
+    &::-webkit-scrollbar {
+        width: 1px;
+        background-color: $dark-blue;
+    }
+}
+
+.modal{
+    &::-webkit-scrollbar {
+        width: 1px;
+        background-color: $dark-blue;
+    }
+}
+
+// .modal-dialog-ferry{
+//     max-width: 1000px;
+// }
+
+.group-info{
+    border: 1px solid #e4e5ec;
+    border-top: 3px solid $blue;
+    padding: 1rem;
+    input, select{
+        height: 34px !important;
+    }
+}
+
+.click-round-trip{
+    cursor: pointer;
+    &:hover{
+        color: $blue;
+    }
+}
+.round-trip{
+    height: 0;
+    overflow: hidden;
+    @include trans(all .3s);
+}
+
+.show-round-trip{
+    .round-trip{
+        padding-top: 2rem;
+        height: 327px
     }
 }

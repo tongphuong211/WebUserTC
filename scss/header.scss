@@ -3,7 +3,7 @@ header{
     position: relative;
     z-index: 99;
     top: 0;
-    background: $white;
+    background: $blue;
     @include trans(all .4s);
     .container{
         display: flex;
@@ -219,6 +219,16 @@ header{
     }
 }
 
+.login-hidden{
+    font-size: .75rem;
+    font-weight: 800;
+    display: none;
+    @include hover;
+    span{
+        @include trans(all 0s);
+    }
+}
+
 .header-sticky{
     top: 0;
     position: sticky;
@@ -239,6 +249,12 @@ header{
 
     .box-memu{
         padding: 1.2rem 0;
+    }
+    .login-hidden{
+        display: block;
+    }
+    .social-links{
+        display: none;
     }
 }
 

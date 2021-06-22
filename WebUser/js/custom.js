@@ -5,6 +5,10 @@ $(function () {
     $(".load-VAT").toggleClass("show-form-VAT");
   });
 
+  $(".click-round-trip").on("click", function(){
+    $("#round-trip").toggleClass("show-round-trip");
+  });
+
   //scroll menu
   $(window).scroll( () => {
 		var windowTop = $(window).scrollTop();
@@ -16,7 +20,7 @@ $(function () {
 function phoneCountryJs(){
   var input = document.querySelector("#phoneList");
   window.intlTelInput(input, {
-      initialCountry: "vn",
+    initialCountry: "vn",
     utilsScript: "js/utils.js", 
   });
 }
