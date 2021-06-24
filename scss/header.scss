@@ -62,12 +62,6 @@ header{
                     color: $white;
                     font-weight: bold;
                 }
-                img{
-                    margin-right: .6rem;
-                    width: 24px;
-                    border-radius: 2px;
-                    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
-                }
             }
         }
         .flex-item{
@@ -111,6 +105,14 @@ header{
             }
         }
     }
+}
+
+
+.img-flags{
+    margin-right: .6rem;
+    width: 24px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0 5px 1px rgba(0, 0, 0, 0.05);
 }
 
 .box-memu{
@@ -245,9 +247,23 @@ header{
     font-size: .75rem;
     font-weight: 800;
     display: none;
-    @include hover;
+    padding: 0 1rem;
+    justify-content: center;
+    a:hover{
+        color: $blue;
+    }
     span{
         @include trans(all 0s);
+    }
+    .a-main{
+        padding: .5rem 0;
+        @include center-item(flex, center, center);
+    }
+    .identity__submenu{
+        a{
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -272,12 +288,12 @@ header{
     .box-memu{
         padding: 1.2rem 0;
     }
-    // .login-hidden{
-    //     display: block;
-    // }
-    // .social-links{
-    //     display: none;
-    // }
+    .login-hidden{
+        display: flex;
+    }
+    .social-links{
+        display: none;
+    }
 }
 
 .identity{
