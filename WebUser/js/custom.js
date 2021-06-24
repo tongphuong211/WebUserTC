@@ -15,6 +15,14 @@ $(function () {
 		 windowTop > 50 ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
 		// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
 	});
+
+  //get ngôn ngữ
+  $("#get-lang").on("click", "a", function () {
+      var atr = $(this).text();
+      var img = $(this).find("img").attr("src");
+      $("#inner-lang").html(atr).fadeIn();
+      $("#inner-img").attr('src',img).fadeIn();
+  });
 });
 
 function phoneCountryJs(){

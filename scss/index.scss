@@ -62,7 +62,7 @@
 }
 
 .img-category{
-    height: 50px;
+    height: 40px;
     object-fit: contain;
     width: 100%;
     margin-bottom: 1.5rem;
@@ -96,7 +96,7 @@
 .inner{
     position: relative;
     background-color: $blue;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     box-shadow: rgba(21, 59, 93, 0.46) 0 4px 4px -10px;
     @include trans(all .2s);
     &::before{
