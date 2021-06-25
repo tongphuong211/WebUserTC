@@ -505,3 +505,12 @@ a:hover {
         height: 327px
     }
 }
+
+.count-result{
+    font-size: .85rem;
+    span{
+        color: $blue;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
