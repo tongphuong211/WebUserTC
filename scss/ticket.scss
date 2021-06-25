@@ -4,6 +4,7 @@
     background: $white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     @include trans(all .3s);
+
     &__name{
         color: $blue;
         line-height: 18px;
@@ -21,18 +22,6 @@
         &:hover{
             color: $orange;
             svg path{fill: $orange;}
-        }
-        &.used{
-            color: gray;
-            svg path{fill:$dark;}
-        }
-        &.cancel{
-            color: $red;
-            svg path{fill:$red;}
-        }
-        &.expired{
-            color: $orange;
-            svg path{fill:$orange;}
         }
     }
     &__info-QR{
@@ -75,7 +64,7 @@
         color: $white !important;
         .ticket__name{
             color: $white !important;
-            svg path{fill:$white;}
+            svg path{fill:$white !important;}
         }
         .ticket__title{
             color: $white !important;
@@ -86,6 +75,33 @@
         .btn{
             background: $white !important;
             color: $blue;
+        }
+    }
+    &.used{
+        .ticket__name{
+            color: gray;
+            svg path{fill: gray;}
+        }
+        &:hover{
+            background: gray;
+        }
+    }
+    &.cancel{
+        .ticket__name{
+            color: $red;
+            svg path{fill: $red;}
+        }
+        &:hover{
+            background: $red;
+        }
+    }
+    &.expired{
+        .ticket__name{
+            color: $orange;
+            svg path{fill: $orange;}
+        }
+        &:hover{
+            background: $orange;
         }
     }
 }
