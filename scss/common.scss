@@ -514,3 +514,17 @@ a:hover {
         font-weight: bold;
     }
 }
+
+.search-plus{
+    margin-bottom: 1.5rem;
+    input, .btn{
+        height: 25px !important;
+        font-size: .875rem;
+    }
+    input{
+        width: 300px !important;
+    }
+    .btn{
+        padding: 0;
+    }
+}
