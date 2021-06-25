@@ -1,12 +1,9 @@
 .ticket{
     border-radius: 5px;
     padding: 1rem;
+    background: $white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     @include trans(all .3s);
-    &:hover{
-        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-        transform: translateY(-5px);
-    }
     &__name{
         color: $blue;
         line-height: 18px;
@@ -44,7 +41,8 @@
         text-align: center;
         img{
             height: 100px;
-            margin: .5rem auto 1.4rem;;
+            margin: .5rem auto 1.4rem;
+            background: $white;
         }
     }
     &__title{
@@ -68,5 +66,26 @@
     }
     .btn{
         font-size: .7rem;
+    }
+    
+    &:hover{
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+        background: $blue;
+        color: $white !important;
+        .ticket__name{
+            color: $white !important;
+            svg path{fill:$white;}
+        }
+        .ticket__title{
+            color: $white !important;
+        }
+        .ticket__info-QR{
+            color: $white !important;
+        }
+        .btn{
+            background: $white !important;
+            color: $blue;
+        }
     }
 }
