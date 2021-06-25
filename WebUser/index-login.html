@@ -17,7 +17,7 @@
     <header>
         <div class="container">
             <div class="header-logo">
-                <a href="index.html">
+                <a href="index-login.html">
                     <img class="logo-img" src="img/logo.png"/>
                 </a>
             </div>
@@ -28,8 +28,8 @@
                     </div>
                     <div class="flex-item">
                         <div class="identity language">
-                            <a class="a-main" href="#"><img class="img-flags" src="img/icon/vn.svg" alt="..." /> Tiếng việt</a>
-                            <ul class="ul-block identity__submenu">
+                            <a class="a-main" href="#"><img class="img-flags" id="inner-img" src="img/icon/vn.svg" alt="..." /> <span id="inner-lang">Tiếng việt</span></a>
+                            <ul class="ul-block identity__submenu" id="get-lang">
                                 <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/vn.svg" alt="..." /> Tiếng việt</a></li>
                                 <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/anh.png" alt="..." />  English</a></li>
                                 <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/china.svg" alt="..." /> 中文</a></li>
@@ -40,8 +40,8 @@
                         <div class="identity pl-5 py-3">
                             <a href="profile.html"><span class="fas fa-user mr-1"></span> tongphuong211@gmail.com</a>
                             <ul class="ul-block identity__submenu">
-                                <li><a class="stretched-link" href="#"><i class="far fa-user-circle mr-1"></i> Thông tin cá nhân</a></li>
-                                <li><a class="stretched-link" href="#"><i class="fal fa-ticket-alt mr-1"></i> Thông tin vé đặt</a></li>
+                                <li><a class="stretched-link" href="profile.html"><i class="far fa-user-circle mr-1"></i> Thông tin cá nhân</a></li>
+                                <li><a class="stretched-link" href="profile.html"><i class="fal fa-ticket-alt mr-1"></i> Thông tin vé đặt</a></li>
                                 <li><a class="stretched-link" href="index.html"><i class="fal fa-sign-out-alt mr-1"></i> Đăng Xuất</a></li>
                             </ul>
                         </div>
@@ -63,10 +63,30 @@
                                 <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
                                 <li><a href="#"><span class="fab fa-instagram"></span></a></li> 
                             </ul>
+                            <div class="flex-item login-hidden">
+                                <div class="identity language mr-3">
+                                    <a class="a-main" href="#"><img class="img-flags mr-2" src="img/icon/vn.svg" alt="..." /> Tiếng việt</a>
+                                    <ul class="ul-block identity__submenu">
+                                        <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/vn.svg" alt="..." /> Tiếng việt</a></li>
+                                        <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/anh.png" alt="..." />  English</a></li>
+                                        <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/china.svg" alt="..." /> 中文</a></li>
+                                        <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/japan.svg" alt="..." /> 日本語</a></li>
+                                        <li><a class="stretched-link" href="#"><img class="img-flags" src="img/icon/korea.png" alt="..." /> 한국어</a></li>
+                                    </ul>
+                                </div>
+                                <div class="identity ml-3">
+                                    <a href="profile.html"><span class="fas fa-user mr-1"></span> tongphuong211@gmail.com</a>
+                                    <ul class="ul-block identity__submenu">
+                                        <li><a class="stretched-link" href="profile.html"><i class="far fa-user-circle mr-1"></i> Thông tin cá nhân</a></li>
+                                        <li><a class="stretched-link" href="profile.html"><i class="fal fa-ticket-alt mr-1"></i> Thông tin vé đặt</a></li>
+                                        <li><a class="stretched-link" href="index.html"><i class="fal fa-sign-out-alt mr-1"></i> Đăng Xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="box-memu">
                             <ul class="menu ul-reset">
-                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="index-login.html">Trang chủ</a></li>
                                 <li>
                                     <a href="#">Dịch vụ</a>
                                     <ul class="sub-menu">
@@ -78,7 +98,7 @@
                                         <li><a class="stretched-link" href="ve-pha.html">Vé phà</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Quản lý vé</a></li>
+                                <li><a href="quan-ly-ve.html">Quản lý vé</a></li>
                                 <li><a href="#">Chính sách & điều khoản</a></li>
                             </ul>
                         <div>

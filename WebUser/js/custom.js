@@ -24,7 +24,10 @@ $(function () {
       $("#inner-img").attr('src',img);
   });
 });
-
+ 
+$(".click-edit").on("click", function(){
+  $(".edit").removeAttr("disabled");
+});
 // $(window).scroll(function() {    
 //   var scroll = $(window).scrollTop();
 
