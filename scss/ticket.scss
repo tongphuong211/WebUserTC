@@ -11,7 +11,7 @@
         color: $blue;
         line-height: 18px;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         font-size: .85rem;
         @include center-item(flex, start, center);
         svg {
@@ -25,6 +25,18 @@
             color: $orange;
             svg path{fill: $orange;}
         }
+        &.used{
+            color: $dark;
+            svg path{fill:$dark;}
+        }
+        &.cancel{
+            color: $red;
+            svg path{fill:$red;}
+        }
+        &.expired{
+            color: $orange;
+            svg path{fill:$orange;}
+        }
     }
     &__info-QR{
         font-size: .75rem;
@@ -34,5 +46,27 @@
             height: 100px;
             margin: .5rem auto 1.4rem;;
         }
+    }
+    &__title{
+        font-size: .75rem;
+        color: $dark-gray;
+        &.first{
+            font-size: .9rem;
+            color: $dark;
+            font-weight: bold;
+        }
+    }
+    &__content{
+        font-size: .75rem;
+        font-weight: bold;
+        &.first{
+            font-size: .9rem;
+        }
+    }
+    .flex-item{
+        padding: .5rem 0;
+    }
+    .btn{
+        font-size: .7rem;
     }
 }

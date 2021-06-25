@@ -10,19 +10,29 @@ $(function () {
   });
 
   //scroll menu
-  $(window).scroll( () => {
-		var windowTop = $(window).scrollTop();
-		 windowTop > 50 ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
-		// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
-	});
+  // $(window).scroll( () => {
+	// 	var windowTop = $(window).scrollTop();
+	// 	 windowTop > 50  ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
+	// 	// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
+	// });
 
   //get ngôn ngữ
   $("#get-lang").on("click", "a", function () {
       var atr = $(this).text();
       var img = $(this).find("img").attr("src");
-      $("#inner-lang").html(atr).fadeIn();
-      $("#inner-img").attr('src',img).fadeIn();
+      $("#inner-lang").html(atr);
+      $("#inner-img").attr('src',img);
   });
+});
+
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 50) {
+      $("header").addClass("header-sticky");
+  } else {
+      $("header").removeClass("header-sticky");
+  }
 });
 
 function phoneCountryJs(){
