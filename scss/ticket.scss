@@ -23,7 +23,7 @@
             svg path{fill: $orange;}
         }
         &.used{
-            color: $dark;
+            color: gray;
             svg path{fill:$dark;}
         }
         &.cancel{
@@ -67,7 +67,7 @@
     .btn{
         font-size: .7rem;
     }
-    
+
     &:hover{
         box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
@@ -86,6 +86,69 @@
         .btn{
             background: $white !important;
             color: $blue;
+        }
+    }
+}
+
+.note-status{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+    li{
+        background: $blue;
+        position: relative;
+        margin-bottom: 1rem;
+        padding: .6rem 1.2rem;
+        color: $white;
+        font-weight: 500;
+        font-size: .8rem;
+        @include trans(all .2s);
+        &::before{
+            position: absolute;
+            left: 0;
+            right: 19px;
+            top: -1rem;
+            height: 1rem;
+            background-color: #24262d;
+            content: "";
+        }
+        &::after{
+            position: absolute;
+            right: 0;
+            top: -1rem;
+            border-bottom: 1rem solid #24262d;
+            border-right: 19px solid transparent;
+            content: "";
+        }
+
+        &.expired{
+            background-color: $orange;
+            &::before{
+                background-color: $dark;
+            }
+            &::after{
+                border-bottom: 1rem solid $dark;
+            }
+        }
+        &.cancel{
+            background-color: $red;
+            &::before{
+                background-color: $dark;
+            }
+            &::after{
+                border-bottom: 1rem solid $dark;
+            }
+        }
+        &.used{
+            background-color: gray;
+            &::before{
+                background-color: $dark;
+            }
+            &::after{
+                border-bottom: 1rem solid $dark;
+            }
         }
     }
 }
