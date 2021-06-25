@@ -168,3 +168,59 @@
         }
     }
 }
+
+.ticket--info{
+    color: $dark !important;
+    box-shadow: none !important;
+    .ticket__name{
+        color: $white !important;
+        svg path{fill:$dark !important;}
+    }
+    .ticket__title{
+        color: $dark !important;
+    }
+    .ticket__info-QR{
+        color: $dark !important;
+    }
+    .btn{
+        background: $dark !important;
+        color: $blue;
+    }
+    &:hover{
+        transform: translateY(0);
+        background: $white;
+        color: $dark !important;
+        .ticket__name{
+            color: $white !important;
+            svg path{fill:$dark !important;}
+        }
+        .ticket__title{
+            color: $dark !important;
+        }
+        .ticket__info-QR{
+            color: $dark !important;
+        }
+        .btn{
+            background: $dark !important;
+            color: $blue;
+        }
+    }
+    img{
+        height: 150px;
+    }
+}
+
+.title-modal--ticket {
+    font-size: 1rem;
+    @include center-item(flex, center, center);
+    svg{
+        margin-right: .8rem;
+        path{
+            fill: $blue;
+        }
+    }
+}
+
+.modal-600{
+    width: 600px;
+}
