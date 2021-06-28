@@ -1,8 +1,10 @@
 .blog-slider {
     width: 95%;
     position: relative;
-    max-width: 800px;
-    margin: auto;
+    // max-width: 800px;
+    max-width: 100%;
+    // margin: auto;
+    margin-left: auto;
     background: $white;
     box-shadow: 0 14px 80px rgba(34, 35, 58, 0.2);
     padding: 25px;
@@ -74,13 +76,14 @@
  
   &__img {
      // width: 40%;
-    width: 300px;
+    // width: 300px;
+    width: 670px;
     flex-shrink: 0;
-    height: 300px;
+    height: 260px;
     background-image: linear-gradient(147deg, $blue 0%, $dark-blue 74%);
     box-shadow: 1px 5px 15px 1px rgb(97, 181, 242, 0.2);
     border-radius: 20px;
-    transform: translateX(-80px);
+    transform: translateX(-90px);
     overflow: hidden;
     
     &::after {
@@ -155,6 +158,7 @@
     font-weight: 700;
     color: $dark-blue;
     margin-bottom: 20px;
+    line-height: 28px;
   }
   
   &__text {

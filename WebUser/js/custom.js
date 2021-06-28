@@ -13,6 +13,7 @@ $(function () {
   $(window).scroll( () => {
 		var windowTop = $(window).scrollTop();
 		 windowTop  ? $('header').addClass('header-sticky') : $('header').removeClass('header-sticky');
+     windowTop > 500 ? $('.scroll-up').addClass('show') : $('.scroll-up').removeClass('show');
 		// windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
 	});
 
